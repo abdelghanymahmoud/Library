@@ -1,4 +1,4 @@
-package com.library.mobels;
+package com.library.models;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -21,4 +21,7 @@ public class User implements Serializable {
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "USER_ROLES", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<Role> roles;
+
+    
+
 }

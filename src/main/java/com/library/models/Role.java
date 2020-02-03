@@ -1,4 +1,4 @@
-package com.library.mobels;
+package com.library.models;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -18,4 +18,6 @@ public class Role implements Serializable {
     private String name;
     @ManyToMany(mappedBy = "roles")
     private Set<User> users;
+
+
 }

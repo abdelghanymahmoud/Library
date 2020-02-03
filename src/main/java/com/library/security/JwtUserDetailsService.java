@@ -1,6 +1,6 @@
 package com.library.security;
 
-import com.library.mobels.User;
+import com.library.models.User;
 import com.library.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
