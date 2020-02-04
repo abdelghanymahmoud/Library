@@ -7,17 +7,17 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Set;
 
-@Setter
-@Getter
 @Entity
 @Table(name = "role")
 public class Role implements Serializable {
+    @Setter
+    @Getter
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Setter
+    @Getter
     private String name;
     @ManyToMany(mappedBy = "roles")
     private Set<User> users;
-
-
 }

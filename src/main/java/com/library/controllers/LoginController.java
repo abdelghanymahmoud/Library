@@ -13,9 +13,6 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping(value = "/signin")
 public class LoginController {
-    @Value("${angular-project}")
-    private static final String angularProject = "angular-project";
-
     private LoginService loginService;
 
     @Autowired
@@ -23,7 +20,6 @@ public class LoginController {
         this.loginService = loginService;
     }
 
-    @CrossOrigin(origins = {"http://localhost:8080", "http://localhost:4200"})
     @PostMapping(value = { "/", "" })
     public ResponseEntity<?> login(@RequestBody UserRequest request) throws Exception {
         LibraryLogger.log.info("Enter login method of LoginController class");
