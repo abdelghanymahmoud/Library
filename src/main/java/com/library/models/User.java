@@ -12,6 +12,7 @@ import java.util.Set;
 @Entity
 @Table(name = "users")
 public class User implements Serializable {
+    // comment in the model layer
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

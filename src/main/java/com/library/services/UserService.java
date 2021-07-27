@@ -40,7 +40,7 @@ public class UserService {
         user.setEmail(userRequest.getEmail());
         user.setPassword(new BCryptPasswordEncoder().encode(userRequest.getPassword()));
         user.setName(userRequest.getName());
-//        userRepository.save(user);
+        userRepository.save(user);
         LibraryLogger.log.info("Before the end of method getUsers in UserController class");
         return user;
     }

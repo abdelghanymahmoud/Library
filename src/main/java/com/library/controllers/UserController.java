@@ -29,7 +29,7 @@ public class UserController {
 
     @GetMapping(value = {"", "/"})
     public ResponseEntity<?> getUsers(){
-        LibraryLogger.log.info("Before the end method getUsers in UserController class");
+        LibraryLogger.log.info("Enter method getUsers in UserController class");
         LibraryLogger.log.info("Before the end of method getUsers in UserController class");
         return ResponseEntity.ok(userService.getUsers());
     }
